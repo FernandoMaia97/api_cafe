@@ -3,7 +3,7 @@ API de tipos de café do Desafio Conves, feita em PHP Codeigniter
 
 ## Configuração
 Após realizar o clone ou o download, entre no diretório da aplicação.
-Crie uma tabela chamada cafe no banco de dados e importe a tabela está no arquivo cafe.sql
+Crie um banco chamado cafe no banco de dados (foi usado mysql) e importe a tabela está no arquivo cafe.sql
 
 Altere as seguintes variáveis conforme o seu ambiente de desenvolvimento.
 
