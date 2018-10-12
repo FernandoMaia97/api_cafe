@@ -28,22 +28,68 @@ Exemplo, ajuste conforme a sua realidade:
 	'database' => 'cafe',
 ```
 
+### Testes
+Para testar os métodos do controller Cafe, que é o responsável pelas respostas da API, vá até o diretório public pelo terminal
 
-Altere a URL da API de tipos de café, para isso, altere a variável baseURL conforme o endereço da API.
-
-Arquivo onde se localiza a variável baseURL
-```javascript
-/src/services/config.js
-```
-A baseURL deverá conter a URL base + o controller cafe da API, como no exemplo abaixo.
-```javascript
-baseURL : 'http://localhost:8081/desafio_conves/public/cafe/'
-```
-
-O layout foi feito com Boostrap, sendo utilizado o Boostrap e Jquery via CDN.
-
-### Compilar e Executar
-Rode o comando abaixo e abra o browser no endereço indicado. Padrão: http://localhost:8080/
 ```shell
-npm run serve
+cd /public
+```
+Há alguns testes configurados: cadastro, cadastro sem parametro, pesquisa, pesquisa com string ao inves de ID e listagem de dados, baseados no código HTTP de resposta da API.
+
+Para executar os testes você deve estar na pasta public via terminal e executar o comando com a sintaxe
+
+```shell
+php index.php Testes teste_a_ser_executado
+```
+
+O nome dos testes disponíveis são: cadastro, cadastro_vazio, listar, pesquisar, pesquisar_nome.
+
+O teste cadastro retornará Passou na linha de resultado se houver exito no cadastro e retorno do codigo 201. Ao rodar uma segunda vez, deverá retornar Falha por tentar cadastrar um mesmo tipo de café novamente (a API deve permitir apenas um café com o mesmo nome). Esse teste envia uma requisição POST para a API.
+
+```shell
+php index.php Testes cadastro
+```
+
+O teste cadastro_vazio retornará Passou na linha de resultado se houver retorno do codigo 400 por falta de parametros. Esse Teste envia requisição sem dados para a API.
+
+```shell
+php index.php Testes cadastro_vazio
+```
+
+O teste pesquisar retornará Passou na linha de resultado se houver retorno do codigo 200 ao encontrar o id 1 no banco (teste baseado no banco exportado). Esse Teste envia requisição GET de Pesquisa com o id 1 para a API.
+
+```shell
+php index.php Testes pesquisar
+```
+
+O teste pesquisar_nome retornará Passou na linha de resultado se houver retorno do codigo 400 ao mandar parametro String e não um Id numerico. Esse Teste envia requisição GET de Pesquisa com um nome para a API invés de um id (a API espera pesquisa apenas por ID).
+
+```shell
+php index.php Testes pesquisar_nome
+```
+
+O teste listar retornará Passou na linha de resultado se houver retorno do codigo 200 ao conseguir listar todos os tipos de café. Esse Teste envia requisição GET para a API.
+
+```shell
+php index.php Testes listar
+```
+
+### Usando a API
+
+A API possui 3 endPoints, dois pelo verbo GET e um pelo verbo POST.
+Exemplo de URL, use como base a URL do arquivo config.php:
+
+Ao fazer uma requisição GET para o controller Cafe e o metodo tipos, deverá ser retornado todos os tipos de café cadastrados no formato de Json
+```php
+http://localhost:8081/desafio_conves/public/cafe/tipos
+```
+
+Ao fazer uma requisição GET para o controller Cafe e o metodo tipos e variavel com id, deverá ser retornado o tipo de café pesquisado atribuido ao id pesquisado no formato de Json
+```php
+http://localhost:8081/desafio_conves/public/cafe/tipos/7
+```
+
+Ao fazer uma requisição POST para o controller Cafe e o metodo tipos, deverá ser enviado as variaveis "nome" e "descricao" no formato de formData
+```php
+http://localhost:8081/desafio_conves/public/cafe/tipos/7
 ```
