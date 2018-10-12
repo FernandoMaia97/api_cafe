@@ -88,10 +88,15 @@ Se houver sucesso na requisição, o retorno será um array de objetos com a seg
 ```json
 [
     {
+        "id": "1",
+        "nome": "Café Expresso",
+        "descricao": "O café espresso (ou expresso, dependendo da preferência de escrita) é um dos principais tipos de café – e é a base de diversos outros. O nome “espresso” vem do italiano “espremido, pressionado”. Ele é feito em poucos segundos sob alta pressão de água na temperatura de consumo. Isso faz com que acumule muito sabor e intensidade"
+    },
+    {
         "id": "7",
         "nome": "Affogato",
         "descricao": "O affogato é mais uma sobremesa do que um drink, o que o torna especialmente delicioso, Consiste na mistura de uma boa colherada de sorvete de baunilha com uma ou duas doses de café espresso. Muitas pessoas discutem sua presença entre os tipos de café, dizendo que deveria ser considerado um doce.\n\nNo entanto, uma receita tão deliciosa simplesmente não poderia ficar de fora da lista. Além disso, há uma versão ainda mais animada da bebida que inclui uma dose de licor de amêndoas na mistura."
-    }, ...
+    },
 ]
 ```
 
