@@ -81,15 +81,15 @@ Exemplo de URL, use como base a URL do arquivo config.php:
 
 Ao fazer uma requisição GET para o controller Cafe e o metodo tipos, deverá ser retornado todos os tipos de café cadastrados no formato de Json
 ```php
-http://localhost:8081/desafio_conves/public/cafe/tipos
+GET:  http://localhost:8081/desafio_conves/public/cafe/tipos
 ```
 
 Ao fazer uma requisição GET para o controller Cafe e o metodo tipos e variavel com id, deverá ser retornado o tipo de café pesquisado atribuido ao id pesquisado no formato de Json
 ```php
-http://localhost:8081/desafio_conves/public/cafe/tipos/7
+GET:  http://localhost:8081/desafio_conves/public/cafe/tipos/7
 ```
 
 Ao fazer uma requisição POST para o controller Cafe e o metodo tipos, deverá ser enviado as variaveis "nome" e "descricao" no formato de formData
 ```php
-http://localhost:8081/desafio_conves/public/cafe/tipos/7
+POST:  http://localhost:8081/desafio_conves/public/cafe/tipos/
 ```
