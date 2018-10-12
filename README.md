@@ -84,12 +84,35 @@ Ao fazer uma requisição GET para o controller Cafe e o metodo tipos, deverá s
 GET:  http://localhost:8081/desafio_conves/public/cafe/tipos
 ```
 
+Se houver sucesso na requisição, o retorno será um array de objetos com a seguinte estrutura:
+```json
+[
+    {
+        "id": "7",
+        "nome": "Affogato",
+        "descricao": "O affogato é mais uma sobremesa do que um drink, o que o torna especialmente delicioso, Consiste na mistura de uma boa colherada de sorvete de baunilha com uma ou duas doses de café espresso. Muitas pessoas discutem sua presença entre os tipos de café, dizendo que deveria ser considerado um doce.\n\nNo entanto, uma receita tão deliciosa simplesmente não poderia ficar de fora da lista. Além disso, há uma versão ainda mais animada da bebida que inclui uma dose de licor de amêndoas na mistura."
+    }, ...
+]
+```
+
 Ao fazer uma requisição GET para o controller Cafe e o metodo tipos e variavel com id, deverá ser retornado o tipo de café pesquisado atribuido ao id pesquisado no formato de Json
 ```php
 GET:  http://localhost:8081/desafio_conves/public/cafe/tipos/7
+```
+
+Se houver sucesso na requisição, o retorno será um array com um unico objeto:
+```json
+[
+    {
+        "id": "7",
+        "nome": "Affogato",
+        "descricao": "O affogato é mais uma sobremesa do que um drink, o que o torna especialmente delicioso, Consiste na mistura de uma boa colherada de sorvete de baunilha com uma ou duas doses de café espresso. Muitas pessoas discutem sua presença entre os tipos de café, dizendo que deveria ser considerado um doce.\n\nNo entanto, uma receita tão deliciosa simplesmente não poderia ficar de fora da lista. Além disso, há uma versão ainda mais animada da bebida que inclui uma dose de licor de amêndoas na mistura."
+    }
+]
 ```
 
 Ao fazer uma requisição POST para o controller Cafe e o metodo tipos, deverá ser enviado as variaveis "nome" e "descricao" no formato de formData
 ```php
 POST:  http://localhost:8081/desafio_conves/public/cafe/tipos/
 ```
+Se houver sucesso no cadastro, o retorno será o codigo HTTP 201.
