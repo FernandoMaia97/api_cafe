@@ -16,7 +16,7 @@ Exemplo, ajuste conforme a sua realidade:
 $config['base_url'] = 'http://localhost:8081/desafio_conves/public/';
 ```
 
-Altere a variável $db['default'] no arquivo database.php, essa variável contém as informações para a conexão com o bando de dados.
+Altere a variável $db['default'] no arquivo database.php, essa variável contém as informações para a conexão com o banco de dados.
 ```shell
 /application/config/database.php
 ```
