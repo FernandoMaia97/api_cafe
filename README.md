@@ -96,7 +96,7 @@ Se houver sucesso na requisição, o retorno será um array de objetos com a seg
         "id": "7",
         "nome": "Affogato",
         "descricao": "O affogato é mais uma sobremesa do que um drink, o que o torna especialmente delicioso, Consiste na mistura de uma boa colherada de sorvete de baunilha com uma ou duas doses de café espresso. Muitas pessoas discutem sua presença entre os tipos de café, dizendo que deveria ser considerado um doce.\n\nNo entanto, uma receita tão deliciosa simplesmente não poderia ficar de fora da lista. Além disso, há uma versão ainda mais animada da bebida que inclui uma dose de licor de amêndoas na mistura."
-    },
+    }
 ]
 ```
 
