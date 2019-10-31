@@ -24,7 +24,7 @@ Exemplo, ajuste conforme a sua realidade:
 ```php
 	'hostname' => 'localhost',
 	'username' => 'root',
-	'password' => '',
+	'password' => 'senha',
 	'database' => 'cafe',
 ```
 
@@ -76,7 +76,7 @@ php index.php Testes listar
 
 ### Usando a API
 
-A API possui 3 endPoints, dois pelo verbo GET e um pelo verbo POST.
+A API possui **3** endPoints, dois pelo verbo GET e um pelo verbo POST.
 Exemplo de URL, use como base a URL do arquivo config.php:
 
 Ao fazer uma requisição GET para o controller Cafe e o metodo tipos, deverá ser retornado todos os tipos de café cadastrados no formato de Json
@@ -120,4 +120,4 @@ Ao fazer uma requisição POST para o controller Cafe e o metodo tipos, deverá 
 ```php
 POST:  http://localhost:8081/desafio_conves/public/cafe/tipos/
 ```
-Se houver sucesso no cadastro, o retorno será o codigo HTTP 201.
+Se houver sucesso no cadastro, o retorno será o codigo **HTTP 201**.
