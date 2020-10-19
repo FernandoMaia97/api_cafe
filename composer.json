@@ -1,29 +1,14 @@
 {
-	"description": "REST Server for the CodeIgniter framework",
-	"name": "chriskacerguis/codeigniter-restserver",
-	"type": "library",
-	"homepage": "https://github.com/chriskacerguis/codeigniter-restserver",
-	"authors": [
-		{
-			"name": "Chris Kacerguis",
-			"role": "Developer"
-		}
-	],
-	"license": "MIT",
-	"support": {
-		"source": "https://github.com/chriskacerguis/codeigniter-restserver"
-	},
-	"require": {
-		"php": ">=5.6",
-		"codeigniter/framework": "3.1.9"
-	},
-	"autoload": {
-		"classmap": [
-			"application/libraries/Format.php",
-			"application/libraries/REST_Controller.php"
-		],
-		"psr-4" : {
-			"Restserver\\Libraries\\" : "application/libraries/"
-		}
-	}
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.2",
+        "vlucas/phpdotenv": "^5.2",
+        "catfan/medoo": "^1.7",
+        "php-di/slim-bridge": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    }
 }
