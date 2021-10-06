@@ -1,5 +1,5 @@
 # API PHP Desafio Conves - Tipos de Café
-API de tipos de café do Desafio Conves, feita em PHP Codeigniter
+API de tipos de café do Desafio Conves, feita em PHP Codeigniter.
 
 ## Configuração
 Após realizar o clone ou o download, entre no diretório da aplicação.
@@ -29,14 +29,14 @@ Exemplo, ajuste conforme a sua realidade:
 ```
 
 ### Testes
-Para testar os métodos do controller Cafe, que é o responsável pelas respostas da API, vá até o diretório public pelo terminal
+Para testar os métodos do controller Cafe, que é o responsável pelas respostas da API, vá até o diretório public pelo terminal:
 
 ```shell
 cd /public
 ```
 Há alguns testes configurados: cadastro, cadastro sem parametro, pesquisa, pesquisa com string ao inves de ID e listagem de dados, baseados no código HTTP de resposta da API.
 
-Para executar os testes você deve estar na pasta public via terminal e executar o comando com a sintaxe
+Para executar os testes você deve estar na pasta public via terminal e executar o comando com a sintaxe:
 
 ```shell
 php index.php Testes teste_a_ser_executado
@@ -79,7 +79,7 @@ php index.php Testes listar
 A API possui **3** endPoints, dois pelo verbo GET e um pelo verbo POST.
 Exemplo de URL, use como base a URL do arquivo config.php:
 
-Ao fazer uma requisição GET para o controller Cafe e o metodo tipos, deverá ser retornado todos os tipos de café cadastrados no formato de Json
+Ao fazer uma requisição GET para o controller Cafe e o metodo tipos, deverá ser retornado todos os tipos de café cadastrados no formato de Json:
 ```php
 GET:  http://localhost:8081/desafio_conves/public/cafe/tipos
 ```
@@ -100,7 +100,7 @@ Se houver sucesso na requisição, o retorno será um array de objetos com a seg
 ]
 ```
 
-Ao fazer uma requisição GET para o controller Cafe e o metodo tipos e variavel com id, deverá ser retornado o tipo de café pesquisado atribuido ao id pesquisado no formato de Json
+Ao fazer uma requisição GET para o controller Cafe e o metodo tipos e variavel com id, deverá ser retornado o tipo de café pesquisado atribuido ao id pesquisado no formato de Json:
 ```php
 GET:  http://localhost:8081/desafio_conves/public/cafe/tipos/7
 ```
@@ -116,7 +116,7 @@ Se houver sucesso na requisição, o retorno será um array com um unico objeto:
 ]
 ```
 
-Ao fazer uma requisição POST para o controller Cafe e o metodo tipos, deverá ser enviado as variaveis "nome" e "descricao" no formato de formData
+Ao fazer uma requisição POST para o controller Cafe e o metodo tipos, deverá ser enviado as variaveis "nome" e "descricao" no formato de formData:
 ```php
 POST:  http://localhost:8081/desafio_conves/public/cafe/tipos/
 ```
